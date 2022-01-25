@@ -10,6 +10,6 @@ navbar-links:
     - Learn markdown: "https://www.markdowntutorial.com/"
   Author's home: "https://deanattali.com"
   
-  plugins:
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
