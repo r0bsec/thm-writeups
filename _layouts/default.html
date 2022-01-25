@@ -22,7 +22,7 @@
     <!-- Bootstrap End -->
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    
+
 
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -36,58 +36,22 @@
 
 <body>
     <div id="header">
-        <!-- <nav>
-          <ul>
-            <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
-            {% if site.show_downloads %}
-              <li class="downloads"><a href="{{ site.github.zip_url }}">ZIP</a></li>
-              <li class="downloads"><a href="{{ site.github.tar_url }}">TAR</a></li>
-              <li class="title">DOWNLOADS</li>
-            {% endif %}
-          </ul>
-        </nav> -->
-
-        <nav class="navbar navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="{{ '/' | relative_url }}">THM Write Ups</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="{{ '/' | relative_url }}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="{{ '/' | relative_url }}">Write Ups</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                          </a>
-                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{{ '/overpass/' | relative_url }}">Overpass</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                </div>
-            </div>
+        <nav>
+            <h1><a href="{{ '/' | relative_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+            <p>{{ site.description | default: site.github.project_tagline }}</p>
         </nav>
-
     </div><!-- end header -->
 
     <div class="wrapper">
 
         <section>
-            <div id="title">
+            <!-- <div id="title">
                 <h1><a href="{{ '/' | relative_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
                 <p>{{ site.description | default: site.github.project_tagline }}</p>
                 <hr>
                 <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{
                         site.github.owner_name }}</a></span>
-            </div>
+            </div> -->
 
             {{ content }}
 
