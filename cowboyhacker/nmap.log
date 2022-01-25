@@ -1,0 +1,53 @@
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-01-19 20:53 EST
+Initiating Ping Scan at 20:53
+Scanning 10.10.47.229 [2 ports]
+Completed Ping Scan at 20:53, 0.26s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 20:53
+Completed Parallel DNS resolution of 1 host. at 20:53, 0.05s elapsed
+Initiating Connect Scan at 20:53
+Scanning 10.10.47.229 [1000 ports]
+Discovered open port 21/tcp on 10.10.47.229
+Discovered open port 80/tcp on 10.10.47.229
+Discovered open port 22/tcp on 10.10.47.229
+Completed Connect Scan at 20:53, 13.23s elapsed (1000 total ports)
+Nmap scan report for 10.10.47.229
+Host is up, received syn-ack (0.28s latency).
+Scanned at 2022-01-19 20:53:07 EST for 13s
+Not shown: 967 filtered tcp ports (no-response)
+PORT      STATE  SERVICE         REASON
+20/tcp    closed ftp-data        conn-refused
+21/tcp    open   ftp             syn-ack
+22/tcp    open   ssh             syn-ack
+80/tcp    open   http            syn-ack
+990/tcp   closed ftps            conn-refused
+40193/tcp closed unknown         conn-refused
+40911/tcp closed unknown         conn-refused
+41511/tcp closed unknown         conn-refused
+42510/tcp closed caerpc          conn-refused
+44176/tcp closed unknown         conn-refused
+44442/tcp closed coldfusion-auth conn-refused
+44443/tcp closed coldfusion-auth conn-refused
+44501/tcp closed unknown         conn-refused
+45100/tcp closed unknown         conn-refused
+48080/tcp closed unknown         conn-refused
+49152/tcp closed unknown         conn-refused
+49153/tcp closed unknown         conn-refused
+49154/tcp closed unknown         conn-refused
+49155/tcp closed unknown         conn-refused
+49156/tcp closed unknown         conn-refused
+49157/tcp closed unknown         conn-refused
+49158/tcp closed unknown         conn-refused
+49159/tcp closed unknown         conn-refused
+49160/tcp closed unknown         conn-refused
+49161/tcp closed unknown         conn-refused
+49163/tcp closed unknown         conn-refused
+49165/tcp closed unknown         conn-refused
+49167/tcp closed unknown         conn-refused
+49175/tcp closed unknown         conn-refused
+49176/tcp closed unknown         conn-refused
+49400/tcp closed compaqdiag      conn-refused
+49999/tcp closed unknown         conn-refused
+50000/tcp closed ibm-db2         conn-refused
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 13.63 seconds
