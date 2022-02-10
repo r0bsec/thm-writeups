@@ -9,3 +9,4 @@
 * **[inclusion](inclusion/index.html)** <span class="badge bg-success">Complete</span> - from [https://tryhackme.com/room/inclusion](https://tryhackme.com/room/inclusion)
 * **[agentsudoctf](agentsudoctf/index.html)** <span class="badge bg-success">Complete</span> - from [https://tryhackme.com/room/agentsudoctf](https://tryhackme.com/room/agentsudoctf)
 * **[Overpass](overpass/index.html)** <span class="badge bg-success">Complete</span> - from [https://tryhackme.com/room/overpass](https://tryhackme.com/room/overpass)
+* **[lazyadmin](lazyadmin/index.html)** <span class="badge bg-success">Complete</span> - from [https://tryhackme.com/room/lazyadmin](https://tryhackme.com/room/lazyadmin)

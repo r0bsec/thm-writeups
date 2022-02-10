@@ -1,0 +1,13 @@
+------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+ Exploit Title                                                                                                                       |  Path
+------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+[01;31m[KSweetRice[m[K 0.5.3 - Remote File Inclusion                                                                                              | php/webapps/10246.txt
+[01;31m[KSweetRice[m[K 0.6.7 - Multiple Vulnerabilities                                                                                           | php/webapps/15413.txt
+[01;31m[KSweetRice[m[K 1.5.1 - Arbitrary File Download                                                                                            | php/webapps/40698.py
+[01;31m[KSweetRice[m[K 1.5.1 - Arbitrary File Upload                                                                                              | php/webapps/40716.py
+[01;31m[KSweetRice[m[K 1.5.1 - Backup Disclosure                                                                                                  | php/webapps/40718.txt
+[01;31m[KSweetRice[m[K 1.5.1 - Cross-Site Request Forgery                                                                                         | php/webapps/40692.html
+[01;31m[KSweetRice[m[K 1.5.1 - Cross-Site Request Forgery / PHP Code Execution                                                                    | php/webapps/40700.html
+[01;31m[KSweetRice[m[K < 0.6.4 - 'FCKeditor' Arbitrary File Upload                                                                                | php/webapps/14184.txt
+------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+Shellcodes: No Results
