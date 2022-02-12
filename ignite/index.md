@@ -8,6 +8,15 @@ tags: ctf,nmap,nikto,gobuster,dirbuster,searchsploit,apache,ubuntu,mysql,linpeas
 
 URL: [https://tryhackme.com/room/ignite](https://tryhackme.com/room/ignite) [Easy]
 
+Tags: 
+<div style="margin-left: 5px;">
+{% assign tags = page.tags | split: " " %}
+{% for tag in tags %}
+<a href="../search/?q={{tag}}" title="Click to search by this tag"><span class="badge bg-secondary">{{tag}}</span></a>
+{% endfor %}
+</div>
+<hr>
+
 ## Reconnaissance
 
 Description of the room:

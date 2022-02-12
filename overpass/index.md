@@ -2,6 +2,15 @@
 
 URL: https://tryhackme.com/room/overpass [Easy]
 
+Tags: 
+<div style="margin-left: 5px;">
+{% assign tags = page.tags | split: " " %}
+{% for tag in tags %}
+<a href="../search/?q={{tag}}" title="Click to search by this tag"><span class="badge bg-secondary">{{tag}}</span></a>
+{% endfor %}
+</div>
+<hr>
+
 ## Reconnaissance
 
 Description of the room:

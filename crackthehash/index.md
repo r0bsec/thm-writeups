@@ -8,6 +8,15 @@ tags: cracking,hashcat,hash-identifier,crackstation
 
 URL: [https://tryhackme.com/room/crackthehash](https://tryhackme.com/room/crackthehash) [Easy]
 
+Tags: 
+<div style="margin-left: 5px;">
+{% assign tags = page.tags | split: " " %}
+{% for tag in tags %}
+<a href="../search/?q={{tag}}" title="Click to search by this tag"><span class="badge bg-secondary">{{tag}}</span></a>
+{% endfor %}
+</div>
+<hr>
+
 ## Reconnaissance
 
 This is not a Capture The Flag. It's a room that has several hashes to be cracked. Description of the room:
