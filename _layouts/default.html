@@ -71,14 +71,14 @@
     <!-- Search code from: https://github.com/christian-fei/Simple-Jekyll-Search -->
     <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
     <script>
-        var sjs = SimpleJekyllSearch({
-            searchInput: document.getElementById('search-input'),
-            resultsContainer: document.getElementById('results-container'),
-            json: '/thm-writeups/search.json',
-            searchResultTemplate: '<li style="padding: 10px;"><strong><a href="{{ site.url }}{url}">{title}</a></strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{subtitle}</li>',
-        })
-
         $().ready(()=>{
+            var sjs = SimpleJekyllSearch({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-container'),
+                json: '/thm-writeups/search.json',
+                searchResultTemplate: '<li style="padding: 10px;"><strong><a href="{{ site.url }}{url}">{title}</a></strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{subtitle}</li>',
+            })
+
             var searchTerm = (new URL(location.href)).searchParams.get('q');
             $("#search-input").val(searchTerm).trigger("input");
             sjs.search(searchTerm);
