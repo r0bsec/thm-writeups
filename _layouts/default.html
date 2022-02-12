@@ -57,7 +57,7 @@
         <section>
             <!-- Search: Start -->
             <input type="search" id="search-input" placeholder="Search write-ups..." class="form-control text-sm">
-            <div class="bg-dark" id="results-container" style="padding: 20px;">
+            <div class="bg-dark collapse" id="results-container">
                 <ul></ul>
             </div>
             <!-- Search: End -->
@@ -75,7 +75,7 @@
             searchInput: document.getElementById('search-input'),
             resultsContainer: document.getElementById('results-container'),
             json: '/thm-writeups/search.json',
-            searchResultTemplate: '<li><strong><a href="{{ site.url }}{url}">{title}</a></strong><br>&nbsp;&nbsp;&nbsp;&nbsp;{subtitle}</li>',
+            searchResultTemplate: '<li style="padding: 10px;"><strong><a href="{{ site.url }}{url}">{title}</a></strong><br>&nbsp;&nbsp;&nbsp;&nbsp;{subtitle}</li>',
         })
     </script>
 </body>
