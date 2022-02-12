@@ -57,7 +57,16 @@
         <section>
             <!-- Search: Start -->
             <input type="search" id="search-input" placeholder="Search write-ups..." class="form-control">
-            <ul id="results-container"></ul>
+            
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Search Results</h5>
+                    <ul id="results-container"></ul>      
+                  <a href="javascript:document.getElementById('search-input').value('');" class="btn btn-primary">Close Results</a>
+                </div>
+              </div>
+
             <!-- Search: End -->
 
             {{ content }}

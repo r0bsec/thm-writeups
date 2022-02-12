@@ -1,7 +1,6 @@
 ---
 title: Search
 permalink: /thm-writeups/search/
-no_share_links: true
 searchExclude: true
 ---
 
