@@ -17,9 +17,9 @@ layout: none
   {
     {% if page.searchExclude != true %}
       "title"     : "{{ page.title | escape }}",
-      "subtitle"  : "{{ page.subtitle | escape | append: "" }}",
+      "subtitle"  : "{{ page.subtitle | escape | append: " " }}",
       "category"  : "{{ page.category | escape }}",
-      "tags"      : "{{ page.tags | join: ', ' | append: "" }}",
+      "tags"      : "{{ page.tags | join: ', ' | append: " " }}",
       "content"   : {{ page.content | jsonify }},
       "url"       : "{{ site.baseurl | append: page.url }}",
       "date"      : "{{ page.date | jsonify }}",
