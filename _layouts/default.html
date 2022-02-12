@@ -77,6 +77,9 @@
             json: '/thm-writeups/search.json',
             searchResultTemplate: '<li style="padding: 10px;"><strong><a href="{{ site.url }}{url}">{title}</a></strong><br>&nbsp;&nbsp;&nbsp;&nbsp;{subtitle}</li>',
         })
+
+        var searchTerm = (new URL(location.href)).searchParams.get('q');
+        $(".search-input").val(searchTerm);
     </script>
 </body>
 
