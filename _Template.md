@@ -14,7 +14,7 @@ Description of the room:
 
 Ran the following:
 
-> `nmap -sC -sV xxx.xxx.xxx.xxx`
+> `nmap x.x.x.x`
 
 Interesting ports found to be open:
 
@@ -29,7 +29,7 @@ Also see: [nmap.log](nmap.log)
 
 Ran the following:
 
-> `gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u http://xxx.xxx.xxx.xxx`
+> `gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u http://x.x.x.x`
 
 Interesting folders found:
 
@@ -38,6 +38,20 @@ Interesting folders found:
 ```
 
 Also see: [gobuster.log](gobuster.log)
+
+### Running: `nikto`
+
+Ran the following:
+
+> `nikto -h x.x.x.x`
+
+Interesting info found:
+
+```python
+TBD                                   
+```
+
+Also see: [nikto.log](nikto.log)
 
 ## Gaining Access
 
@@ -60,7 +74,7 @@ This is a test machine. However, in a Red Team scenario, we could:
 
 ### Search and replace our IP address in all logs via: 
 
-> `find /var/log -name "*" -exec sed -i 's/10.10.2.14/127.0.0.1/g' {}\;`
+> `find /var/log -name "*" -exec sed -i 's/10.10.2.14/127.0.0.1/g' {} \;`
 
 ### Wipe bash history for any accounts we used via: 
 

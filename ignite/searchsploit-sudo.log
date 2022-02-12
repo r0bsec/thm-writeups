@@ -1,0 +1,38 @@
+----------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+ Exploit Title                                                                                                                                             |  Path
+----------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+(Tod Miller's) [01;31m[KSudo[m[K/[01;31m[KSudo[m[KEdit 1.6.9p21/1.7.2p4 - Local Privilege Escalation                                                                                 | multiple/local/11651.sh
+Apple Mac OSX - [01;31m[KSudo[m[K Password Bypass (Metasploit)                                                                                                          | osx/local/27944.rb
+Battery Life Toolkit 1.0.9 - 'bltk_[01;31m[Ksudo[m[K' Local Privilege Escalation                                                                                        | linux/local/33576.txt
+ptrace - [01;31m[KSudo[m[K Token Privilege Escalation (Metasploit)                                                                                                      | linux/local/47345.rb
+RedStar 3.0 Desktop - Enable [01;31m[Ksudo[m[K Privilege Escalation                                                                                                     | linux/local/35746.sh
+[01;31m[KSudo[m[K 1.3.1 < 1.6.8p (OpenBSD) - Pathname Validation Privilege Escalation                                                                                   | bsd/local/1087.c
+[01;31m[KSudo[m[K 1.5/1.6 - Heap Corruption                                                                                                                             | linux/local/20901.c
+[01;31m[KSudo[m[K 1.6.3 - Unclean Environment Variable Privilege Escalation                                                                                             | linux/local/21227.sh
+[01;31m[KSudo[m[K 1.6.8 - Information Disclosure                                                                                                                        | linux/local/24606.c
+[01;31m[KSudo[m[K 1.6.8p9 - SHELLOPTS/PS4 Environment Variables Privilege Escalation                                                                                    | linux/local/1310.txt
+[01;31m[KSudo[m[K 1.6.9p18 - 'Defaults SetEnv' Local Privilege Escalation                                                                                               | multiple/local/7129.sh
+[01;31m[KSudo[m[K 1.6.x - Environment Variable Handling Security Bypass (1)                                                                                             | linux/local/27056.pl
+[01;31m[KSudo[m[K 1.6.x - Environment Variable Handling Security Bypass (2)                                                                                             | linux/local/27057.py
+[01;31m[KSudo[m[K 1.6.x - Password Prompt Heap Overflow                                                                                                                 | linux/local/21420.c
+[01;31m[Ksudo[m[K 1.8.0 < 1.8.3p1 - '[01;31m[Ksudo[m[K_debug' glibc FORTIFY_SOURCE Bypass + Privilege Escalation                                                                     | linux/local/25134.c
+[01;31m[Ksudo[m[K 1.8.0 < 1.8.3p1 - Format String                                                                                                                       | linux/dos/18436.txt
+[01;31m[KSudo[m[K 1.8.14 (RHEL 5/6/7 / Ubuntu) - '[01;31m[KSudo[m[Kedit' Unauthorized Privilege Escalation                                                                           | linux/local/37710.txt
+[01;31m[KSudo[m[K 1.8.20 - 'get_process_ttyname()' Local Privilege Escalation                                                                                           | linux/local/42183.c
+[01;31m[KSudo[m[K 1.8.25p - 'pwfeedback' Buffer Overflow                                                                                                                | linux/local/48052.sh
+[01;31m[KSudo[m[K 1.8.25p - 'pwfeedback' Buffer Overflow (PoC)                                                                                                          | linux/dos/47995.txt
+[01;31m[Ksudo[m[K 1.8.27 - Security Bypass                                                                                                                              | linux/local/47502.py
+[01;31m[KSudo[m[K 1.9.5p1 - 'Baron Samedit ' Heap-Based Buffer Overflow Privilege Escalation (1)                                                                        | multiple/local/49521.py
+[01;31m[KSudo[m[K 1.9.5p1 - 'Baron Samedit ' Heap-Based Buffer Overflow Privilege Escalation (2)                                                                        | multiple/local/49522.c
+[01;31m[KSudo[m[K Perl 1.6.x - Environment Variable Handling Security Bypass                                                                                            | linux/local/26498.txt
+[01;31m[Ksudo[m[K.bin - NLSPATH Privilege Escalation                                                                                                                    | linux/local/319.c
+[01;31m[KSudo[m[KEdit 1.6.8 - Local Change Permission                                                                                                                   | linux/local/470.c
+ZPanel z[01;31m[Ksudo[m[K - Local Privilege Escalation (Metasploit)                                                                                                     | linux/local/26451.rb
+----------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+ Shellcode Title                                                                                                                                           |  Path
+----------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+Linux/x86 - chmod 777 /etc/[01;31m[Ksudo[m[Kers Shellcode (36 bytes)                                                                                                    | linux_x86/43463.nasm
+Linux/x86 - Edit /etc/[01;31m[Ksudo[m[Kers (ALL ALL=(ALL) NOPASSWD: ALL) For Full Access + Null-Free Shellcode (79 bytes)                                               | linux_x86/44507.c
+Linux/x86 - Edit /etc/[01;31m[Ksudo[m[Kers (ALL ALL=(ALL) NOPASSWD: ALL) For Full Access Shellcode (86 bytes)                                                           | linux_x86/13331.c
+----------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------

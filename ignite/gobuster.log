@@ -1,0 +1,33 @@
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.88.210
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2022/02/11 19:18:00 Starting gobuster in directory enumeration mode
+===============================================================
+/index                (Status: 200) [Size: 16595]
+/home                 (Status: 200) [Size: 16595]
+/0                    (Status: 200) [Size: 16595]
+/assets               (Status: 301) [Size: 313] [--> http://10.10.88.210/assets/]
+/'                    (Status: 400) [Size: 1134]                                 
+/$FILE                (Status: 400) [Size: 1134]                                 
+/$file                (Status: 400) [Size: 1134]                                 
+/offline              (Status: 200) [Size: 70]                                   
+/*checkout*           (Status: 400) [Size: 1134]                                 
+/*docroot*            (Status: 400) [Size: 1134]                                 
+/$File                (Status: 400) [Size: 1134]                                 
+/*                    (Status: 400) [Size: 1134]                                 
+/!ut                  (Status: 400) [Size: 1134]                                 
+/search!default       (Status: 400) [Size: 1134]                                 
+/msgReader$1          (Status: 400) [Size: 1134]                                 
+/guestsettings!default (Status: 400) [Size: 1134]                                
+/login!withRedirect   (Status: 400) [Size: 1134]                                 
+/fuel                 (Status: 301) [Size: 311] [--> http://10.10.88.210/fuel/]  
+/$1                   (Status: 400) [Size: 1134]                                 
