@@ -1,3 +1,6 @@
+---
+searchExclude: true
+---
 # Current Write-ups:
 
 ## Difficulty: Easy

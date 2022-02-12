@@ -15,14 +15,17 @@ layout: none
   {% endfor %}
   {% for page in site.html_pages %}
   {
-    "title"     : "{{ page.title | escape }}",
-    "subtitle"  : "{{ page.subtitle | escape }}",
-    "category"  : "{{ page.category | escape }}",
-    "tags"      : "{{ page.tags | join: ', ' }}",
-    "content"   : {{ page.content | jsonify }},
-    "url"       : {{ site.baseurl | append: page.url | jsonify }},
-    "date"      : {{ page.date | jsonify }},
-    "type"      : "Page"
-    }{% unless forloop.last %},{% endunless %}
+    {% if page.searchExclude != true %}
+    {
+      "title"     : "{{ page.title | escape }}",
+      "subtitle"  : "{{ page.subtitle | escape }}",
+      "category"  : "{{ page.category | escape }}",
+      "tags"      : "{{ page.tags | join: ', ' }}",
+      "content"   : {{ page.content | jsonify }},
+      "url"       : {{ site.baseurl | append: page.url | jsonify }},
+      "date"      : {{ page.date | jsonify }},
+      "type"      : "Page"
+    }
+  }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]

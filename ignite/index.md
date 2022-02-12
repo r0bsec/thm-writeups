@@ -2,7 +2,7 @@
 title: "THM:ignite"
 subtitle: "TryHackMe CTF room: https://tryhackme.com/room/ignite"
 category: "CTF"
-tags: ctf,nmap,nikto,gobuster,dirbuster,searchsploit,apache,ubuntu,mysql
+tags: ctf,nmap,nikto,gobuster,dirbuster,searchsploit,apache,ubuntu,mysql,linpeas,privesc,upload,sudo
 ---
 # THM:ignite
 
