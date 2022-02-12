@@ -20,7 +20,7 @@ layout: none
     "category"  : "{{ page.category | escape }}",
     "tags"      : "{{ page.tags | join: ', ' }}",
     "content"   : {{ page.content | jsonify }},
-    "url"       : "{{ site.baseurl | append: page.url | jsonify }}",
+    "url"       : {{ site.baseurl | append: page.url | jsonify }},
     "type"      : "Page"
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
