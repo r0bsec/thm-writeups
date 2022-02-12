@@ -6,9 +6,18 @@ layout: none
     {
       "title"    : "{{ post.title | escape }}",
       "category" : "{{ post.category }}",
-      "tags"     : "{{ post.tags | join: ', ' }}",
+      "tags"     : "{{ post.tags | array_to_sentence_string }}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
-      "date"     : "{{ post.date }}"
-    } {% unless forloop.last %},{% endunless %}
+      "date"     : "{{ post.date }}",
+      "formatted-date" : "{{ post.date | date: '%b %-d, %Y' }}",
+      "type"     : "Post"
+    },
+  {% endfor %}
+  {% for page in site.html_pages %}
+  {
+    "title"    : "{{ page.title | escape }}",
+    "url"      : "{{ site.baseurl }}{{ page.url }}",
+    "type"     : "Page"
+    }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
