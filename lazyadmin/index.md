@@ -2,7 +2,7 @@
 title: "THM:lazyadmin"
 subtitle: "TryHackMe CTF room: https://tryhackme.com/room/lazyadmin"
 category: "CTF"
-tags: ctf,nmap,gobuster,dirbuster,searchsploit,apache,ubuntu,mysql,linpeas,privesc,upload,file-upload-bypass,sudo,sweetrice,cms
+tags: ctf nmap gobuster dirbuster searchsploit apache ubuntu mysql linpeas privesc upload file-upload-bypass sudo sweetrice cms
 ---
 # THM:lazyadmin
 
@@ -10,7 +10,7 @@ URL: [https://tryhackme.com/room/lazyadmin](https://tryhackme.com/room/lazyadmin
 
 <div class="panel">
 Tags: 
-{% for tag in page.tags | split: "," %}
+{% for tag in page.tags %}
   <span class="badge bg-secondary">{{tag}}</span>
 {% endfor %}
 </div>
