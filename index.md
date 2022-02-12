@@ -1,7 +1,9 @@
 ---
 searchExclude: true
 ---
-# Current Write-ups:
+# Current Write-ups
+
+Below are the write-ups of the key details of each TryHackMe room, in case you get stuck.
 
 ## Difficulty: Easy
 
