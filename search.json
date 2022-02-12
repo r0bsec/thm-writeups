@@ -15,12 +15,12 @@ layout: none
   {% endfor %}
   {% for page in site.html_pages %}
   {
-    "title"     : "{{ page.title | jsonify }}",
-    "subtitle"  : "{{ page.subtitle | jsonify }}",
-    "category"  : "{{ page.category }}",
-    "tags"      : "{{ page.tags | join: ', ' }}",
-    "content"   : "{{ page.content | jsonify }}",
-    "url"       : "{{ page.url | jsonify }}",
+    "title"     : {{ page.title | jsonify }},
+    "subtitle"  : {{ page.subtitle | jsonify }},
+    "category"  : {{ page.category }},
+    "tags"      : {{ page.tags | join: ', ' }},
+    "content"   : {{ page.content | jsonify }},
+    "url"       : {{ site.baseurl }}{{ page.url | jsonify }},
     "type"      : "Page"
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
