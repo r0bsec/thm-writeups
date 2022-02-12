@@ -19,7 +19,7 @@ layout: none
     "subtitle"  : "{{ page.subtitle | escape }}",
     "category"  : "{{ page.category | escape }}",
     "tags"      : "{{ page.tags | join: ', ' }}",
-    "content"   : "{{ page.content | escape}}",
+    "content"   : "{{ page.content | jsonify }}",
     "url"       : "{{ site.baseurl }}{{ page.url | jsonify }}",
     "type"      : "Page"
     }{% unless forloop.last %},{% endunless %}
