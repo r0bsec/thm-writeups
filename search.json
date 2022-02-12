@@ -15,8 +15,9 @@ layout: none
   {% endfor %}
   {% for page in site.html_pages %}
   {
-    "title"    : "{{ page.title | escape }}",
-    "url"      : "{{ site.baseurl }}{{ page.url }}",
+    "title"     : "{{ item.title | jsonify }}",
+    "content"   : "{{ item.content | jsonify }}",
+    "url"       : "{{ item.url | jsonify }}",
     "type"     : "Page"
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
