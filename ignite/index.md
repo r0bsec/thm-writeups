@@ -1,3 +1,8 @@
+---
+title: "THM:ignite"
+category: CTF
+tags: ctf,nmap,nikto,gobuster,dirbuster,searchsploit,apache,ubuntu,mysql
+---
 # THM:ignite
 
 URL: https://tryhackme.com/room/ignite [Easy]
