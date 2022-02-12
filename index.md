@@ -1,6 +1,6 @@
 # Current Write-ups:
 
-## Difficult: Easy
+## Difficulty: Easy
 
 1. **[basicpentestingjt](basicpentestingjt/index.html)** <span class="badge bg-success">Complete</span> - from [https://tryhackme.com/room/basicpentestingjt](https://tryhackme.com/room/basicpentestingjt)
 1. **[picklerick](picklerick/index.html)** <span class="badge bg-success">Complete</span> - from [https://tryhackme.com/room/picklerick](https://tryhackme.com/room/picklerick)
