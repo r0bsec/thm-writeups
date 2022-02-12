@@ -21,7 +21,7 @@ layout: none
       "subtitle"  : "{{ page.subtitle | escape }}",
       "category"  : "{{ page.category | escape }}",
       "tags"      : "{{ page.tags | join: ', ' }}",
-      "content"   : "{{ page.content | jsonify | smartify }}",
+      "content"   : "{{ page.content | jsonify | replace "\", "\\" }}",
       "url"       : "{{ site.baseurl | append: page.url }}",
       "date"      : "{{ page.date | jsonify }}",
       "type"      : "Page"
