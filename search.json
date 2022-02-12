@@ -22,9 +22,6 @@ layout: none
       "tags"      : "{{ page.tags | join: ', ' | append: " " }}",
       "content"   : {{ page.content | jsonify }},
       "url"       : "{{ site.baseurl | append: page.url }}",
-      "date"      : "{{ page.date | jsonify }}",
-      "excerpt1"  : "{{ page.excerpt }}",
-      "excerpt2"  : "{{ page.page_excerpt }}",
       "type"      : "Page"
     {% endif %}
   }{% unless forloop.last %},{% endunless %}
