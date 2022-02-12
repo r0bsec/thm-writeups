@@ -1,6 +1,12 @@
+---
+title: "THM:ohsint"
+subtitle: "TryHackMe room: https://tryhackme.com/room/ohsint"
+category: "OSINT"
+tags: osint,nmap,gobuster,dirbuster
+---
 # THM:OhSINT
 
-URL: https://tryhackme.com/room/ohsint [Easy]
+URL: [https://tryhackme.com/room/ohsint](https://tryhackme.com/room/ohsint) [Easy]
 
 Tags: 
 <div style="margin-left: 5px;">

@@ -1,6 +1,12 @@
+---
+title: "THM:picklerick"
+subtitle: "TryHackMe CTF room: https://tryhackme.com/room/picklerick"
+category: "CTF"
+tags: ctf,nmap,gobuster,dirbuster,nikto,hydra,robots.txt,sudo
+---
 # THM:Pickle Rick
 
-URL: https://tryhackme.com/room/picklerick [Easy]
+URL: [https://tryhackme.com/room/picklerick](https://tryhackme.com/room/picklerick) [Easy]
 
 Tags: 
 <div style="margin-left: 5px;">
