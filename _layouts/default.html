@@ -80,6 +80,7 @@
 
         var searchTerm = (new URL(location.href)).searchParams.get('q');
         $("#search-input").val(searchTerm).trigger("input");
+        sjs.search(searchTerm);
     </script>
 </body>
 
