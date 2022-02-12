@@ -16,7 +16,6 @@ layout: none
   {% for page in site.html_pages %}
   {
     {% if page.searchExclude != true %}
-    {
       "title"     : "{{ page.title | escape }}",
       "subtitle"  : "{{ page.subtitle | escape }}",
       "category"  : "{{ page.category | escape }}",
@@ -25,7 +24,6 @@ layout: none
       "url"       : "{{ site.baseurl | append: page.url }}",
       "date"      : "{{ page.date | jsonify }}",
       "type"      : "Page"
-    }
     {% endif %}
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
