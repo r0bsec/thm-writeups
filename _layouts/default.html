@@ -82,7 +82,7 @@
             searchInput: document.getElementById('search-input'),
             resultsContainer: document.getElementById('results-container'),
             json: '/thm-writeups/search.json',
-            searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a> <br>Tags: {tags | append: "" }</li>'
+            searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a> <br>&nbsp;&nbsp;&nbsp;{ excerpt }</li>'
         })
     </script>
 </body>
