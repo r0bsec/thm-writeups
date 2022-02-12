@@ -8,15 +8,13 @@ tags: ctf nmap gobuster dirbuster searchsploit apache ubuntu mysql linpeas prive
 
 URL: [https://tryhackme.com/room/lazyadmin](https://tryhackme.com/room/lazyadmin) [Easy]
 
-<div class="panel panel-default">
-  <div class="panel-body">
-    Tags: 
+Tags: 
     {% assign tags = page.tags | split: " " %}
     {% for tag in tags %}
     <span class="badge bg-secondary">{{tag}}</span>
     {% endfor %}
-  </div>
-</div>
+
+<hr>
 
 ## Reconnaissance
 
