@@ -79,7 +79,7 @@
         })
 
         var searchTerm = (new URL(location.href)).searchParams.get('q');
-        $(".search-input").val(searchTerm);
+        $("#search-input").val(searchTerm).trigger("input");
     </script>
 </body>
 
