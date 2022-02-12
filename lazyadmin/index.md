@@ -10,7 +10,7 @@ page_excerpts: true
 URL: [https://tryhackme.com/room/lazyadmin](https://tryhackme.com/room/lazyadmin) [Easy]
 
 Tags: 
-<div>
+<div style="margin-left: 5px;">
 {% assign tags = page.tags | split: " " %}
 {% for tag in tags %}
 <span class="badge bg-secondary">{{tag}}</span>

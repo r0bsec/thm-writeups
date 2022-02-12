@@ -49,8 +49,6 @@
         <nav>
             <h1><a href="{{ '/' | relative_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
             <p>{{ site.description | default: site.github.project_tagline }}</p>
-
-            <input type="search" id="search-input" placeholder="Search write-ups..." class="form-control float-right">
         </nav>
     </div><!-- end header -->
 
@@ -58,7 +56,7 @@
 
         <section>
             <!-- Search: Start -->
-            
+            <input type="search" id="search-input" placeholder="Search write-ups..." class="form-control text-sm">            
             <ul id="results-container"></ul>      
             <!-- Search: End -->
 
@@ -75,7 +73,7 @@
             searchInput: document.getElementById('search-input'),
             resultsContainer: document.getElementById('results-container'),
             json: '/thm-writeups/search.json',
-            searchResultTemplate: '<li><strong><a href="{{ site.url }}{url}">{title}</a></strong> <br>&nbsp;&nbsp;{subtitle}</li>',
+            searchResultTemplate: '<li><strong><a href="{{ site.url }}{url}">{title}</a></strong> <br>&nbsp;{subtitle}</li>',
         })
     </script>
 </body>
