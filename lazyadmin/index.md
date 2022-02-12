@@ -10,7 +10,7 @@ URL: [https://tryhackme.com/room/lazyadmin](https://tryhackme.com/room/lazyadmin
 
 <div class="panel">
 Tags: 
-{% for tag in page.tags %}
+{% for tag in page.tags | split: " " %}
   <span class="badge bg-secondary">{{tag}}</span>
 {% endfor %}
 </div>
