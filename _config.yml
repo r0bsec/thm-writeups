@@ -1,14 +1,8 @@
-title: TryHackMe Write-Ups by r0bsec
-description: Write-ups of rooms on the www.tryhackme.com website.
+title: TryHackMe CTF Write-Ups by r0bsec
+description: Write-ups of CTF rooms on the www.tryhackme.com website.
 show_downloads: false
 theme: jekyll-theme-midnight
 
-navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
   
 plugins:
   - jekyll-paginate
