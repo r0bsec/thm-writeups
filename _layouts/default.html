@@ -80,7 +80,9 @@
             })
 
             var searchTerm = (new URL(location.href)).searchParams.get('q');
+            console.log("Setting 'search-input' to: '" + searchTerm + "'.");
             $("#search-input").val(searchTerm).trigger("input");
+            console.log("Performing search of: '" + searchTerm + "'.");
             sjs.search(searchTerm);
         });
     </script>
