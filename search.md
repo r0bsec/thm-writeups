@@ -31,7 +31,7 @@ searchExclude: true
         var simpleJekyllSearch=SimpleJekyllSearch({
             searchInput: searchInput,
             resultsContainer: document.getElementById('search-results-container'),
-            searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a> <br>&nbsp;&nbsp;&nbsp;{ excerpt }</li>',
+            searchResultTemplate: '<li><strong><a href="{{ site.url }}{url}">{title}</a></strong><br>&nbsp;&nbsp;&nbsp;{ subtitle }</li>',
             // json: '{{ site.baseurl }}/search.json'
             json: searchData
             // ,fuzzy: true,

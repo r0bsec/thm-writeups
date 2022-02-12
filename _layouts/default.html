@@ -57,16 +57,7 @@
         <section>
             <!-- Search: Start -->
             <input type="search" id="search-input" placeholder="Search write-ups..." class="form-control">
-            
-
-            <div class="card bg-dark" style="width: 18rem;" id="results-container">
-                <div class="card-body">
-                  <h5 class="card-title">Search Results</h5>
-                    <ul></ul>      
-                  <a href="javascript:void(0);" onclick="document.getElementById('results-container').collapse();" class="btn btn-primary">Close Results</a>
-                </div>
-              </div>
-
+            <ul id="results-container"></ul>      
             <!-- Search: End -->
 
             {{ content }}
@@ -82,7 +73,7 @@
             searchInput: document.getElementById('search-input'),
             resultsContainer: document.getElementById('results-container'),
             json: '/thm-writeups/search.json',
-            searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a> <br>&nbsp;&nbsp;&nbsp;{ excerpt }</li>'
+            searchResultTemplate: '<li><strong><a href="{{ site.url }}{url}">{title}</a></strong> <br>&nbsp;&nbsp;&nbsp;{ subtitle }</li>'
         })
     </script>
 </body>
