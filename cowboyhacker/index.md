@@ -1,3 +1,9 @@
+---
+title: "THM:cowboyhacker"
+subtitle: "TryHackMe CTF room: https://tryhackme.com/room/cowboyhacker"
+category: "CTF"
+tags: ctf,nmap,gobuster,dirbuster,ftp,hydra,apache,ubuntu,privesc,sudo
+---
 # THM:cowboyhacker
 
 URL: [https://tryhackme.com/room/cowboyhacker](https://tryhackme.com/room/cowboyhacker) [Easy]
@@ -122,7 +128,7 @@ This is a test machine. However, in a Red Team scenario, we could:
 
 ### Search and replace our IP address in all logs via: 
 
-> `find /var/log -name "*" -exec sed -i 's/10.10.2.14/127.0.0.1/g' {}\;`
+> `find /var/log -name "*" -exec sed -i 's/10.10.2.14/127.0.0.1/g' {} \;`
 
 ### Wipe bash history for any accounts we used via: 
 

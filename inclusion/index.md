@@ -1,3 +1,9 @@
+---
+title: "THM:inclusion"
+subtitle: "TryHackMe CTF room: https://tryhackme.com/room/inclusion"
+category: "CTF"
+tags: ctf,nmap,gobuster,dirbuster,lfi,local-file-inclusion
+---
 # THM:inclusion
 
 URL: [https://tryhackme.com/room/inclusion](https://tryhackme.com/room/inclusion) [Easy]

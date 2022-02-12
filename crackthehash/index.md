@@ -1,10 +1,16 @@
+---
+title: "THM:crackthehash"
+subtitle: "TryHackMe room: https://tryhackme.com/room/crackthehash"
+category: "Cracking"
+tags: cracking,hashcat,hash-identifier,crackstation
+---
 # THM:Crack the hash
 
-URL: https://tryhackme.com/room/crackthehash [Easy]
+URL: [https://tryhackme.com/room/crackthehash](https://tryhackme.com/room/crackthehash) [Easy]
 
 ## Reconnaissance
 
-Description of the room:
+This is not a Capture The Flag. It's a room that has several hashes to be cracked. Description of the room:
 
 > Cracking hashes challenges
 

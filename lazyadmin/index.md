@@ -1,6 +1,19 @@
+---
+title: "THM:lazyadmin"
+subtitle: "TryHackMe CTF room: https://tryhackme.com/room/lazyadmin"
+category: "CTF"
+tags: ctf,nmap,gobuster,dirbuster,searchsploit,apache,ubuntu,mysql,linpeas,privesc,upload,file-upload-bypass,sudo,sweetrice,cms
+---
 # THM:lazyadmin
 
-URL: https://tryhackme.com/room/lazyadmin [Easy]
+URL: [https://tryhackme.com/room/lazyadmin](https://tryhackme.com/room/lazyadmin) [Easy]
+
+<div class="panel">
+Tags: 
+{% for tag in page.tags %}
+  <span class="badge bg-default">{{tag}}</span>
+{% endfor %}
+</div>
 
 ## Reconnaissance
 
@@ -102,7 +115,7 @@ So maybe the admin account is `manager` and maybe that hash at the end is a crac
 
 Now that we have the username and password, `gobuster` found a directory on the website: `/content/as` that has a login page. We can log into the app from there using the `manager` account and cracked password from the previous step.
 
-### Unprivileged Access
+### Unprivileged Access: File Upload Bypass
 
 In the "Media Center" navigation on the left (http://10.10.223.52/content/as/?type=media_center), it looks like we can upload files. Since this is a PHP website, we might be able to upload a [reverse shell](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php).
 
@@ -173,7 +186,7 @@ This is a test machine. However, in a Red Team scenario, we could:
 
 ### Search and replace our IP address in all logs via: 
 
-> `find /var/log -name "*" -exec sed -i 's/10.10.2.14/127.0.0.1/g' {}\;`
+> `find /var/log -name "*" -exec sed -i 's/10.10.2.14/127.0.0.1/g' {} \;`
 
 ### Wipe bash history for any accounts we used via: 
 

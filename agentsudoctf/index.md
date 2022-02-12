@@ -1,6 +1,12 @@
+---
+title: "THM:agentsudoctf"
+subtitle: "TryHackMe CTF room: https://tryhackme.com/room/agentsudoctf"
+category: "CTF"
+tags: ctf,nmap,nikto,gobuster,dirbuster,steganography,steghide,binwalk,john,zip2john,apache,ubuntu,CVE-2019–14287
+---
 # THM:Agent Sudo
 
-URL: https://tryhackme.com/room/agentsudoctf [Easy]
+URL: [https://tryhackme.com/room/agentsudoctf](https://tryhackme.com/room/agentsudoctf) [Easy]
 
 ## Reconnaissance
 
@@ -232,7 +238,7 @@ This is a test machine. However, in a Red Team scenario, we could:
 
 ### Search and replace our IP address in all logs via: 
 
-> `find /var/log -name "*" -exec sed -i 's/10.10.2.14/127.0.0.1/g' {}\;`
+> `find /var/log -name "*" -exec sed -i 's/10.10.2.14/127.0.0.1/g' {} \;`
 
 ### Wipe bash history for any accounts we used via: 
 
