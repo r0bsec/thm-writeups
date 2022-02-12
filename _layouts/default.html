@@ -79,11 +79,13 @@
                 searchResultTemplate: '<li style="padding: 10px;"><strong><a href="{{ site.url }}{url}">{title}</a></strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{subtitle}</li>',
             })
 
-            var searchTerm = (new URL(location.href)).searchParams.get('q');
-            console.log("Setting 'search-input' to: '" + searchTerm + "'.");
-            $("#search-input").val(searchTerm).trigger("input");
-            console.log("Performing search of: '" + searchTerm + "'.");
-            sjs.search(searchTerm);
+            setTimeout(()=>{
+                var searchTerm = (new URL(location.href)).searchParams.get('q');
+                console.log("Setting 'search-input' to: '" + searchTerm + "'.");
+                $("#search-input").val(searchTerm).trigger("input");
+                console.log("Performing search of: '" + searchTerm + "'.");
+                sjs.search(searchTerm);
+            },1000);
         });
     </script>
 </body>
