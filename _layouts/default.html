@@ -59,11 +59,11 @@
             <input type="search" id="search-input" placeholder="Search write-ups..." class="form-control">
             
 
-            <div class="card" style="width: 18rem;">
+            <div class="card bg-dark" style="width: 18rem;" id="results-container">
                 <div class="card-body">
                   <h5 class="card-title">Search Results</h5>
-                    <ul id="results-container"></ul>      
-                  <a href="javascript:document.getElementById('search-input').value('');" class="btn btn-primary">Close Results</a>
+                    <ul></ul>      
+                  <a href="javascript:void(0);" onclick="document.getElementById('results-container').collapse();" class="btn btn-primary">Close Results</a>
                 </div>
               </div>
 
