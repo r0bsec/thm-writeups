@@ -6,7 +6,16 @@ tags: ctf,nmap,gobuster,dirbuster,session,broken-authentication,javascript,apach
 ---
 # THM:tomghost
 
-URL: https://tryhackme.com/room/tomghost [Easy]
+URL: [https://tryhackme.com/room/tomghost](https://tryhackme.com/room/tomghost) [Easy]
+
+Tags: 
+<div style="margin-left: 5px;">
+{% assign tags = page.tags | split: "," %}
+{% for tag in tags %}
+<a href="../search/?q={{tag}}" title="Click to search by this tag"><span class="badge bg-secondary">{{tag}}</span></a>
+{% endfor %}
+</div>
+<hr>
 
 ## Reconnaissance
 

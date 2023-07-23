@@ -6,7 +6,7 @@ tags: ctf,nmap,gobuster,dirbuster,session,broken-authentication,javascript,apach
 ---
 # THM:startup
 
-URL: https://tryhackme.com/room/startup [Easy]
+URL: [https://tryhackme.com/room/startup](https://tryhackme.com/room/startup) [Easy]
 
 Tags: 
 <div style="margin-left: 5px;">
