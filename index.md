@@ -19,4 +19,5 @@ Below are the write-ups of the key details of each TryHackMe room, in case you g
 1. **[lazyadmin](lazyadmin/index.html)** <span class="badge bg-success">Complete</span> - from [https://tryhackme.com/room/lazyadmin](https://tryhackme.com/room/lazyadmin)
 1. **[ignite](ignite/index.html)** <span class="badge bg-success">Complete</span> - from [https://tryhackme.com/room/ignite](https://tryhackme.com/room/ignite)
 1. **[startup](startup/index.html)** <span class="badge bg-success">Complete</span> - from [https://tryhackme.com/room/startup](https://tryhackme.com/room/startup)
+1. **[tomghost](tomghost/index.html)** <span class="badge bg-success">Complete</span> - from [https://tryhackme.com/room/tomghost](https://tryhackme.com/room/tomghost)
 
