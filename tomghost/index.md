@@ -1,4 +1,4 @@
---
+---
 title: "THM:tomghost"
 subtitle: "TryHackMe CTF room: https://tryhackme.com/room/tomghost"
 category: "CTF"
