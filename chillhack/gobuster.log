@@ -1,0 +1,19 @@
+===============================================================
+Gobuster v3.5
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.168.235
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.5
+[+] Timeout:                 10s
+===============================================================
+2023/08/10 19:15:18 Starting gobuster in directory enumeration mode
+===============================================================
+[2K/images               (Status: 301) [Size: 315] [--> http://10.10.168.235/images/]
+[2K/css                  (Status: 301) [Size: 312] [--> http://10.10.168.235/css/]
+[2K/js                   (Status: 301) [Size: 311] [--> http://10.10.168.235/js/]
+[2K/fonts                (Status: 301) [Size: 314] [--> http://10.10.168.235/fonts/]
+[2K/secret               (Status: 301) [Size: 315] [--> http://10.10.168.235/secret/]

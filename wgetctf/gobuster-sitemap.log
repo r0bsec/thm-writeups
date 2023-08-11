@@ -1,0 +1,25 @@
+===============================================================
+Gobuster v3.5
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.165.3/sitemap/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/big.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.5
+[+] Timeout:                 10s
+===============================================================
+2023/07/27 19:49:20 Starting gobuster in directory enumeration mode
+===============================================================
+[2K/.htaccess            (Status: 403) [Size: 276]
+[2K/.htpasswd            (Status: 403) [Size: 276]
+[2K/.ssh                 (Status: 301) [Size: 317] [--> http://10.10.165.3/sitemap/.ssh/]
+[2K/css                  (Status: 301) [Size: 316] [--> http://10.10.165.3/sitemap/css/]
+[2K/fonts                (Status: 301) [Size: 318] [--> http://10.10.165.3/sitemap/fonts/]
+[2K/images               (Status: 301) [Size: 319] [--> http://10.10.165.3/sitemap/images/]
+[2K/js                   (Status: 301) [Size: 315] [--> http://10.10.165.3/sitemap/js/]
+
+===============================================================
+2023/07/27 19:54:18 Finished
+===============================================================

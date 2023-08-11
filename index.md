@@ -20,4 +20,6 @@ Below are the write-ups of the key details of each TryHackMe room, in case you g
 1. **[ignite](ignite/index.html)** <span class="badge bg-success">Complete</span> - from [https://tryhackme.com/room/ignite](https://tryhackme.com/room/ignite)
 1. **[startup](startup/index.html)** <span class="badge bg-success">Complete</span> - from [https://tryhackme.com/room/startup](https://tryhackme.com/room/startup)
 1. **[tomghost](tomghost/index.html)** <span class="badge bg-success">Complete</span> - from [https://tryhackme.com/room/tomghost](https://tryhackme.com/room/tomghost)
+1. **[wgetctf](wgetctf/index.html)** <span class="badge bg-success">Complete</span> - from [https://tryhackme.com/room/wgetctf](https://tryhackme.com/room/wgetctf)
+1. **[chillhack](chillhack/index.html)** <span class="badge bg-info text-dark">Pending</span> - from [https://tryhackme.com/room/chillhack](https://tryhackme.com/room/chillhack)
 
