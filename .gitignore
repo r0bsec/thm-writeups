@@ -515,3 +515,4 @@ FodyWeavers.xsd
 crackthehash/rock4.sorted.txt
 crackthehash/rock4.txt
 *booty*.txt
+!_TemplateRoom/_booty.txt

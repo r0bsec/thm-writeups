@@ -1,5 +1,6 @@
-#!/bin/bash
+#!/bin/zsh
 
+# Define color codes for messages
 Black='\033[0;30m'
 DarkGray='\033[1;30m'
 Red='\033[0;31m'
@@ -18,50 +19,114 @@ LightGray='\033[0;37m'
 White='\033[1;37m'
 NC='\033[0m' # No Color
 
-function setStatus(){
+function print_msg(){
 
-    description=$1
-    severity=$2
+    description=$2
+    severity=$1
 
     case "$severity" in
-        s)
+        "success")
             echo -e "[${LightGreen}+${NC}] ${LightGreen}${description}${NC}"
         ;;
-        f)
+        "error")
             echo -e "[${Red}-${NC}] ${LightRed}${description}${NC}"
         ;;
-        q)
-            echo -e "[${LightPurple}?${NC}] ${LightPurple}${description}${NC}"
+        "warning")
+            echo -e "[${Yellow}?${NC}] ${Yellow}${description}${NC}"
         ;;
-        *)
+        "info")
             echo -e "[${LightCyan}*${NC}] ${LightCyan}${description}${NC}"
         ;;
     esac
 }
 
-newDir=~/gitlocal/r0bsec/thm-writeups/${1}/
+# Check for arguments
+if [ $# -eq 0 ]; then
+    echo "Create a new THM room write-up directory with template files."
+    echo ""
+    echo "  Usage: $0 <room_name>"
+    exit 1
+fi
 
-setStatus "Creating new directory: $newDir" "*"
+# Handle help argument
+if [ "$1" = "--help" ]; then
+    echo "Create a new THM room write-up directory with template files."
+    echo ""
+    echo "  Usage: $0 <room_name>"
+    exit 0
+fi
 
-mkdir $newDir
+ROOM_PATH=`pwd`/${1}/
 
-setStatus "Creating symbolic '~/current/' link to new directory: $newDir" "*"
+# Initialize a variable to track success
+success=true
 
-rm -Rf ~/current
-ln -f -s $newDir ~/current
+print_msg info "STEP 1: Create the directory if it doesn't exist: $ROOM_PATH"
+mkdir -p "$ROOM_PATH"
+if [ $? -ne 0 ]; then
+    print_msg error "Failed to create directory: $ROOM_PATH"
+    success=false
+fi
 
-setStatus "Copying template notes to new directory: ${newDir}index.md" "*"
+if [ "$success" = true ]; then
+    print_msg info "STEP 2: Setting ROOM environment variable"
 
-cp ${newDir}../_Template.md ~/current/index.md
+    export_statement="export ROOM=${ROOM_PATH}"
+    zshrc_file=~/.zshrc
 
-setStatus "Copying helper scripts (kickoff.sh, killbyname.sh) to new directory ${newDir}" "*"
+    if ! grep -qF "$export_statement" $zshrc_file; then
+        echo "$export_statement" >> $zshrc_file
+        print_msg success "ROOM export statement added to: $zshrc_file"
+    else
+        sed -i "s|export ROOM=.*|${export_statement}|" $zshrc_file
+        print_msg success "ROOM export statement updated in: $zshrc_file"
+    fi
 
-cp ${newDir}../kickoff.sh ~/current/
-cp ${newDir}../killbyname.sh ~/current/
-chmod +x ${newDir}../*.sh
+    print_msg info "Reloading .zshrc environment (${zshrc_file})"
+    source ${zshrc_file}
 
-setStatus "Switching to new directory ${newDir} via '~/current/'..." "*"
+    if [ $? -ne 0 ]; then
+        print_msg error "Failed to set ROOM environment variable"
+        success=false
+    fi
+fi
 
-cd ~/current
+if [ "$success" = true ]; then
+    print_msg info "STEP 3: Copy files from _TemplateRoom to: $ROOM"
+    cp -r ./_TemplateRoom/* "$ROOM"
+    if [ $? -ne 0 ]; then
+        print_msg error "Failed to copy files to $ROOM"
+        success=false
+    else
+        mv "${ROOM}_Template.md" "${ROOM}index.md"
+    fi
+fi
 
-newDir=''
+if [ "$success" = true ]; then
+    print_msg info "STEP 4: Search and replace %ROOM% in files"
+    for file in "$ROOM"/*; do
+        if [ -f "$file" ]; then
+            sed -i "s/%ROOM%/${1}/g" "$file"
+            if [ $? -ne 0 ]; then
+                print_msg error "Failed to replace %ROOM% in $file"
+                success=false
+                break
+            fi
+        fi
+    done
+fi
+
+if [ "$success" = true ]; then
+    print_msg info "STEP 5: Changing directory to $ROOM"
+    cd "$ROOM" || { print_msg error "Failed to switch to $ROOM"; exit 1; }
+    if [ $? -ne 0 ]; then
+        print_msg error "Failed to switch to $ROOM"
+        success=false
+    fi
+fi
+
+if [ "$success" = true ]; then
+    print_msg success "All steps completed successfully"
+else
+    print_msg error "Script encountered errors, some steps might have been undone"
+fi

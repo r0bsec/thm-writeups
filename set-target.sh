@@ -42,29 +42,24 @@ function print_msg(){
 
 # Check for arguments
 if [ $# -eq 0 ]; then
-    echo "Change to an existing THM room write-up directory."
+    echo "Set the target of your current CTF to the \$TARGET environment variable."
     echo ""
-    echo "  Usage: $0 <room_name>"
+    echo "  Usage: $0 <target-ip-address>"
     exit 1
 fi
 
-ROOM_PATH=`pwd`/${1}/
+TARGET=${1}
 
-if [ -d "$ROOM_PATH" ]; then
-    export_statement="export ROOM=${ROOM_PATH}"
-    zshrc_file=~/.zshrc
+export_statement="export TARGET=${TARGET}"
+zshrc_file=~/.zshrc
 
-    sed -i '/^export ROOM=/d' $zshrc_file
-    echo "$export_statement" >> $zshrc_file
-    print_msg success "ROOM export statement added to: $zshrc_file"
+sed -i '/^export TARGET=/d' $zshrc_file
+echo "$export_statement" >> $zshrc_file
+print_msg success "TARGET export statement added to: $zshrc_file"
 
-    print_msg success "ROOM environment variable changed to $1"
+print_msg success "TARGET environment variable changed to $TARGET"
 
-    echo ""
-    print_msg info "Please run the following command to reload your environment:"
-    echo ""
-    echo "  source ${zshrc_file}"
-
-else
-    print_msg error "The room '$1' does not exist"
-fi
+echo ""
+print_msg info "Please run the following command to reload your environment:"
+echo ""
+echo "  source ${zshrc_file}"
