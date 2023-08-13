@@ -240,7 +240,11 @@ We could run [Linpeas](https://github.com/carlospolop/PEASS-ng). Another place t
 find / -perm +6000 2> /dev/null | grep '/bin/'
 ```
 
-{% include note.html content="'setuid' (or 'suid') binaries are special types of binary executable files in Unix-like operating systems that have a permission mode set which allows them to be executed with the privileges of the file owner, often granting higher privileges than the user running them would normally have. These binaries can perform actions that require elevated permissions, such as modifying system files or accessing sensitive data, even if the user executing them doesn't have those privileges.<br><br>The permission mode '6000' is a combination of the 'setuid' flag (bit 4000) and the regular executable flag (bit 100), resulting in a mode of 'suid + execute' (also known as 'setuid on execute'). When a binary file has this permission mode, it means that anyone who runs the binary will temporarily acquire the permissions of the owner of the binary." %}
+> **About `setuid`:**
+> 
+> `setuid` (or `suid`) binaries are special types of binary executable files in Unix-like operating systems that have a permission mode set which allows them to be executed with the privileges of the file owner, often granting higher privileges than the user running them would normally have. These binaries can perform actions that require elevated permissions, such as modifying system files or accessing sensitive data, even if the user executing them doesn"t have those privileges.
+>  
+> The permission mode "6000" is a combination of the "setuid" flag (bit 4000) and the regular executable flag (bit 100), resulting in a mode of "suid + execute" (also known as "setuid on execute"). When a binary file has this permission mode, it means that anyone who runs the binary will temporarily acquire the permissions of the owner of the binary.
 
 And yes, there is one oddball in the output:
 
