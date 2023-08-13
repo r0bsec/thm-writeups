@@ -6,7 +6,7 @@ tags: ctf,nmap,gobuster,apache,ubuntu,john,hydra,privesc
 ---
 # THM:mrrobot
 
-URL: [https://tryhackme.com/room/mrrobot](https://tryhackme.com/room/mrrobot) [Easy]
+URL: [https://tryhackme.com/room/mrrobot](https://tryhackme.com/room/mrrobot) [Medium]
 
 Tags: 
 <div style="margin-left: 5px;">
