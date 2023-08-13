@@ -274,7 +274,7 @@ And yes, there is one oddball in the output:
 
 It's `nmap`! Meaning, that when we run `nmap` on this target machine, we will take on the identity of the owner - who is `root`!
 
-Using [gtfobins](https://gtfobins.github.io/gtfobins/nmap/) we can see that we can start `nmap --interactive` and then drop to a shell with `!sh` command from `nmap> ` prompt.
+Using [gtfobins](https://gtfobins.github.io/gtfobins/nmap/) we can see that we can start `nmap --interactive` and then drop to a shell with `!sh` command from the `nmap> ` prompt.
 
 Well, when we drop to a shell, we are now running as `root`!
 
