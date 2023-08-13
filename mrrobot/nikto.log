@@ -1,0 +1,13 @@
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          10.10.39.226
++ Target Hostname:    10.10.39.226
++ Target Port:        80
++ Start Time:         2023-08-12 21:58:21 (GMT-4)
+---------------------------------------------------------------------------
++ Server: Apache
++ /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
++ /ODyr7ymu.pt: Retrieved x-powered-by header: PHP/5.5.29.
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ /index: Uncommon header 'tcn' found, with contents: list.
++ /index: Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. The following alternatives for 'index' were found: index.html, index.php. See: http://www.wisec.it/sectou.php?id=4698ebdc59d15,https://exchange.xforce.ibmcloud.com/vulnerabilities/8275

