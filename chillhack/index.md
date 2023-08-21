@@ -243,12 +243,12 @@ The end result is kind of weird. We are running as root, our "file system" insid
 
 As for that `docker` command above, here's a breakdown of each part of the command:
 
-- `docker run`: This initiates the execution of a Docker container.
-- `-v /:/mnt`: This flag specifies a volume binding, allowing the root directory ("/") of the host system to be mounted at "/mnt" within the container. This can be risky as it provides the container with access to the entire host filesystem.
-- `--rm`: This flag indicates that the container should be automatically removed once it exits.
-- `-it`: These flags enable an interactive terminal session with the container.
-- `alpine`: This is the name of the Docker image you are running. It indicates that you want to use the Alpine Linux image.
-- `chroot /mnt sh`: This command is executed within the container. It attempts to change the root directory of the container's environment to "/mnt" (which is actually the root directory of the host system due to the volume binding) and then starts an interactive shell (sh) within that changed root directory. This can give you access to the host's filesystem from within the container.
+* `docker run`: This initiates the execution of a Docker container.
+* `-v /:/mnt`: This flag specifies a volume binding, allowing the root directory ("/") of the host system to be mounted at "/mnt" within the container. This can be risky as it provides the container with access to the entire host filesystem.
+* `--rm`: This flag indicates that the container should be automatically removed once it exits.
+* `-it`: These flags enable an interactive terminal session with the container.
+* `alpine`: This is the name of the Docker image you are running. It indicates that you want to use the Alpine Linux image.
+* `chroot /mnt sh`: This command is executed within the container. It attempts to change the root directory of the container's environment to "/mnt" (which is actually the root directory of the host system due to the volume binding) and then starts an interactive shell (sh) within that changed root directory. This can give you access to the host's filesystem from within the container.
 
 
-Completed: [2023-08-20 23:30:28]
+Completed: [`2023-08-20 23:30:28`]
