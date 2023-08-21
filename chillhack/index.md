@@ -213,29 +213,42 @@ Finally, you can now `ssh apaar@<machine-ip>` and you should not be prompted for
 
 ## Privilege Escalation
 
-TBD
+This is a bit unrealistic and convoluted, but I suppose it is a good reinforcement of these skills that we learn! Here is the summary of the kill-chain to get privilege escalation:
+
+1. Run `netstat -tupln` see we're hosting a site on `localhost:9001`
+2. Use `ssh -L` port redirection to re-host that website locally on our workstation.
+3. Use `apaar`'s database username and password to log in to this website.
+4. Grab the hacker picture. Run: `steghide extract -sf ./hacker-with-laptop_23-2147985341.jpg` and it extracts a `backup.zip`
+5. Run: `fcrackzip -u -D -p /usr/share/wordlists/rockyou.txt ./backup.zip` to try to crack the ZIP password.
+6. Run: `unzip ./backup.zip`, use the password you just found to reveal: `source_code.php`.
+7. We see this references uses `anurodh` and a password that is base64-encoded.
+8. Run: `echo "password" | base64 -d` to base64-decode the password to clear-text.
+9. Now we can log in as this other user. We run: `su anurodh` and use the password from above.
+
+Also see: [backup.zip](backup.zip), [hacker-with-laptop_23-2147985341.jpg](hacker-with-laptop_23-2147985341.jpg), and [source_code.php](source_code.php)
+
+Let me stop and highlight this next part, because it's pretty interesting!
+
+### Docker Filesystem Breakout / Escape
+
+This user `anurodh` doesn't have any additional `sudo` privilege and `linpeas` didn't find much. However, `anurodh` does have privileges to use Docker. Docker containers run in a "namespace" within Linux. When a container is running as `root`, there are potential ways to jump over that namespace and into the host machine. If we run `docker images`, we can see that have an Alpine Linux image. This means we can try:
+
+```bash
+docker run -v /:/mnt --rm -it alpine chroot /mnt sh
+```
+
+This basically: starts a container running `alpine`, mounts the host `/` path to `/mnt/` inside of the container, then it changes the "root" of the filesystem within the container to be `/mnt/`, and then starts a shell.
+
+The end result is kind of weird. We are running as root, our "file system" inside fo the container is literally the same as the host machine. That means we can pretty much do most (all?) things that `root` can do in the host system? Well, at the very least we can grab our final flag of `/root/proof.txt`, which completes the room.
+
+As for that `docker` command above, here's a breakdown of each part of the command:
+
+- `docker run`: This initiates the execution of a Docker container.
+- `-v /:/mnt`: This flag specifies a volume binding, allowing the root directory ("/") of the host system to be mounted at "/mnt" within the container. This can be risky as it provides the container with access to the entire host filesystem.
+- `--rm`: This flag indicates that the container should be automatically removed once it exits.
+- `-it`: These flags enable an interactive terminal session with the container.
+- `alpine`: This is the name of the Docker image you are running. It indicates that you want to use the Alpine Linux image.
+- `chroot /mnt sh`: This command is executed within the container. It attempts to change the root directory of the container's environment to "/mnt" (which is actually the root directory of the host system due to the volume binding) and then starts an interactive shell (sh) within that changed root directory. This can give you access to the host's filesystem from within the container.
 
 
-## Clearing Tracks
-
-This is a test machine. However, in a Red Team scenario, we could:
-
-### Delete relevant logs from `/var/log/` - although that might draw attention.
-
-> `rm -Rf /var/log/*`
-
-### Search and replace our IP address in all logs via: 
-
-> `find /var/log -name "*" -exec sed -i 's/10.10.2.14/127.0.0.1/g' {} \;`
-
-### Wipe bash history for any accounts we used via: 
-
-> `cat /dev/null > /root/.bash_history`
->  
-> `cat /dev/null > /home/merlin/.bash_history`
->  
-> `cat /dev/null > /home/skyfrick/.bash_history`
-
-## Summary
-
-Completed: [2023-07-22 21:25:01]
+Completed: [2023-08-20 23:30:28]
